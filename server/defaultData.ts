@@ -1,0 +1,330 @@
+import { DatabaseState } from '../src/types/portfolio';
+
+export const initialData: DatabaseState = {
+  profile: {
+    id: 'profile-main',
+    display_name: 'Elias Vance',
+    professional_title: '3D Artist | Blender Specialist | Visual Designer',
+    biography: 'With over seven years of dedicated exploration in 3D visualization and computer graphics, I sculpt evocative architectural environments, precision hard-surface machinery, and atmospheric digital spaces. My primary creative toolchain is centered around Blender (Cycles & Eevee), supported by ZBrush for organic forms, Substance 3D Painter for tactile material wear, and DaVinci Resolve for filmic color timing.\n\nI believe in disciplined composition, tangible physics of materials, and quiet lighting that invites contemplation rather than visual noise. Every project is an inquiry into structure, reflection, and form.',
+    profile_image: '/src/assets/images/artist_portrait_1794374247762.jpg',
+    introduction: 'Based in Berlin, collaborating globally with creative studios, independent directors, and visionary brands on 3D concept development and digital artwork.',
+    contact_email: 'elias.vance.3d@example.com',
+    resume_url: '#resume-download',
+    location: 'Berlin, Germany',
+    available_for_freelance: true,
+    updated_at: new Date().toISOString()
+  },
+  settings: {
+    site_title: 'ELIAS VANCE — 3D & Digital Creator',
+    artist_name: 'Elias Vance',
+    hero_headline: 'Sculpting light, geometry, and digital spaces.',
+    hero_subheadline: 'Specializing in hard-surface mechanical modeling, brutalist environmental design, and ray-traced cinematic renders in Blender.',
+    featured_project_id: 'proj-monolith-01',
+    contact_email: 'elias.vance.3d@example.com',
+    footer_text: '© 2026 Elias Vance. All rights reserved. Crafted with precision.',
+    seo_title: 'Elias Vance — 3D Artist & Blender Specialist Portfolio',
+    seo_description: 'Explore selected 3D renders, hard-surface modeling, architectural spaces, and digital art created in Blender.',
+    accent_color: '#18181b'
+  },
+  categories: [
+    '3D Modeling',
+    'Environment Design',
+    'Character Design',
+    '3D Animation',
+    'Rendering',
+    'Digital Art'
+  ],
+  projects: [
+    {
+      id: 'proj-monolith-01',
+      title: 'Monolith: Oceanic Brutalism',
+      slug: 'monolith-oceanic-brutalism',
+      description: 'An architectural meditation on weight and reflection. A monolithic modular structure suspended above calm coastal waters, balancing raw concrete with warm copper insets.',
+      detailed_overview: 'Created entirely inside Blender 4.2 LTS using an iterative boolean-bevel modifier pipeline. Volumetric marine fog was rendered with a heterogeneous volume absorption node setup in Cycles (4096 samples, AgX High Contrast). The reflective water plane incorporates micro-displacement caustics and subtle wave vector displacements.',
+      thumbnail_url: '/src/assets/images/hero_3d_render_1794374246726.jpg',
+      category: 'Environment Design',
+      software_used: ['Blender 4.2 LTS', 'Cycles Engine', 'Substance 3D', 'AgX Color'],
+      external_url: 'https://artstation.com',
+      blender_project_url: 'https://github.com/blender-projects/monolith-brutalism',
+      video_url: '',
+      is_featured: true,
+      is_published: true,
+      creation_date: 'Autumn 2026',
+      images: [
+        {
+          id: 'img-m1',
+          project_id: 'proj-monolith-01',
+          image_url: '/src/assets/images/hero_3d_render_1794374246726.jpg',
+          caption: 'Final Cycles 8K production render with volumetric coastal fog and copper panel reflections',
+          display_order: 1,
+          image_type: 'render'
+        },
+        {
+          id: 'img-m2',
+          project_id: 'proj-monolith-01',
+          image_url: '/src/assets/images/blender_environment_1794374249305.jpg',
+          caption: 'Complementary interior pavilion study highlighting natural directional light through concrete pillars',
+          display_order: 2,
+          image_type: 'viewport'
+        }
+      ],
+      created_at: new Date('2026-09-15').toISOString(),
+      updated_at: new Date('2026-10-01').toISOString()
+    },
+    {
+      id: 'proj-drone-02',
+      title: 'Aero-Tactical Recon Drone V-9',
+      slug: 'aero-tactical-recon-drone-v9',
+      description: 'Precision hard-surface mechanical study of an autonomous dual-rotor reconnaissance drone with high-torque gimbal camera and carbon fiber framework.',
+      detailed_overview: 'Modeled with strict quad-dominant topology suited for sub-d smoothing and non-destructive workflow. Mechanical rigging in Blender with inverse kinematics on landing gear dampers and camera gimbal. Texturing authored with custom procedural carbon-weave shaders and multi-channel dirt maps.',
+      thumbnail_url: '/src/assets/images/blender_cyber_mech_1794374247474.jpg',
+      category: '3D Modeling',
+      software_used: ['Blender 4.2', 'Cycles', 'HardOps', 'Substance Painter'],
+      external_url: 'https://sketchfab.com',
+      blender_project_url: 'https://blendswap.com/blend/recon-drone-v9',
+      video_url: '',
+      is_featured: true,
+      is_published: true,
+      creation_date: 'Summer 2026',
+      images: [
+        {
+          id: 'img-d1',
+          project_id: 'proj-drone-02',
+          image_url: '/src/assets/images/blender_cyber_mech_1794374247474.jpg',
+          caption: 'Studio turntable angle displaying titanium chassis and wireframe overlay aesthetics',
+          display_order: 1,
+          image_type: 'render'
+        }
+      ],
+      created_at: new Date('2026-07-20').toISOString(),
+      updated_at: new Date('2026-08-04').toISOString()
+    },
+    {
+      id: 'proj-pavilion-03',
+      title: 'Nordic Forest Sanctuary',
+      slug: 'nordic-forest-sanctuary',
+      description: 'A tranquil architectural interior pairing raw cast concrete with Scandinavian natural oak timber, framed by floor-to-ceiling glass looking onto pine forest.',
+      detailed_overview: 'Focus on physical sky simulation using the Nishita Sky Texture model in Blender. Realistic fabric draping simulated in Marvelous Designer and imported via Alembic cache. Floor reflection utilizes accurate micro-scratched roughness maps for authentic polished concrete response.',
+      thumbnail_url: '/src/assets/images/blender_environment_1794374249305.jpg',
+      category: 'Environment Design',
+      software_used: ['Blender 4.2', 'Cycles', 'Marvelous Designer', 'Photoshop'],
+      external_url: 'https://behance.net',
+      blender_project_url: 'https://github.com/blender-projects/nordic-sanctuary',
+      video_url: '',
+      is_featured: true,
+      is_published: true,
+      creation_date: 'Spring 2026',
+      images: [
+        {
+          id: 'img-p1',
+          project_id: 'proj-pavilion-03',
+          image_url: '/src/assets/images/blender_environment_1794374249305.jpg',
+          caption: 'Main wide shot: Natural light illumination through high-transmittance low-iron glass',
+          display_order: 1,
+          image_type: 'render'
+        }
+      ],
+      created_at: new Date('2026-04-10').toISOString(),
+      updated_at: new Date('2026-05-02').toISOString()
+    },
+    {
+      id: 'proj-wanderer-04',
+      title: 'Vanguard: Nomad Scout',
+      slug: 'vanguard-nomad-scout',
+      description: 'Futuristic character concept featuring layered weather-worn garments, modular ceramic armor plates, and tactical thermal optical headset.',
+      detailed_overview: 'Base mesh sculpted in ZBrush, retopologized in Blender for clean deformation topology. High-frequency skin pores and cloth micro-fibers baked down into 32-bit float displacement maps. Shader network utilizes multi-layer subsurface scattering in Blender Cycles.',
+      thumbnail_url: '/src/assets/images/blender_character_1794374247614.jpg',
+      category: 'Character Design',
+      software_used: ['Blender 4.2', 'ZBrush', 'Substance 3D', 'Marvelous Designer'],
+      external_url: 'https://artstation.com',
+      blender_project_url: 'https://artstation.com/artwork/vanguard-scout',
+      video_url: '',
+      is_featured: false,
+      is_published: true,
+      creation_date: 'Winter 2026',
+      images: [
+        {
+          id: 'img-w1',
+          project_id: 'proj-wanderer-04',
+          image_url: '/src/assets/images/blender_character_1794374247614.jpg',
+          caption: 'Full-length hero render under cold industrial key light and warm secondary rim lights',
+          display_order: 1,
+          image_type: 'render'
+        }
+      ],
+      created_at: new Date('2026-01-18').toISOString(),
+      updated_at: new Date('2026-02-12').toISOString()
+    }
+  ],
+  gallery: [
+    {
+      id: 'gal-01',
+      title: 'Oceanic Brutalism Study',
+      description: 'Volumetric water fog and copper reflections under overcast dawn sky',
+      image_url: '/src/assets/images/hero_3d_render_1794374246726.jpg',
+      category: 'Environment Design',
+      software: 'Blender / Cycles',
+      display_order: 1,
+      is_published: true,
+      created_at: new Date('2026-09-15').toISOString()
+    },
+    {
+      id: 'gal-02',
+      title: 'V-9 Drone Precision Chassis',
+      description: 'Hard-surface carbon weave and titanium mechanical gimbal assembly',
+      image_url: '/src/assets/images/blender_cyber_mech_1794374247474.jpg',
+      category: '3D Modeling',
+      software: 'Blender 4.2 & Substance',
+      display_order: 2,
+      is_published: true,
+      created_at: new Date('2026-07-20').toISOString()
+    },
+    {
+      id: 'gal-03',
+      title: 'Concrete & Timber Light Study',
+      description: 'Afternoon sun casting linear window shadows into Scandinavian brutalist living space',
+      image_url: '/src/assets/images/blender_environment_1794374249305.jpg',
+      category: 'Environment Design',
+      software: 'Blender Cycles & Nishita Sky',
+      display_order: 3,
+      is_published: true,
+      created_at: new Date('2026-04-10').toISOString()
+    },
+    {
+      id: 'gal-04',
+      title: 'Vanguard Scout Armor Sculpt',
+      description: 'Cinematic rim lighting on ceramic composite plates and woven cowl',
+      image_url: '/src/assets/images/blender_character_1794374247614.jpg',
+      category: 'Character Design',
+      software: 'Blender & ZBrush',
+      display_order: 4,
+      is_published: true,
+      created_at: new Date('2026-01-18').toISOString()
+    }
+  ],
+  skills: [
+    {
+      id: 'sk-1',
+      name: 'Blender 4.x Suite',
+      category: 'Software',
+      description: 'Comprehensive DCC pipeline: Box & sub-d modeling, procedural shaders, Geometry Nodes, and compositing.',
+      proficiency_label: 'Daily Driver',
+      display_order: 1,
+      is_visible: true
+    },
+    {
+      id: 'sk-2',
+      name: 'Cycles & AgX Ray-Tracing',
+      category: 'Rendering',
+      description: 'Physically based lighting, spectral color management, caustics, and complex volume absorption.',
+      proficiency_label: 'Expert',
+      display_order: 2,
+      is_visible: true
+    },
+    {
+      id: 'sk-3',
+      name: 'Hard-Surface Modeling',
+      category: '3D & CG',
+      description: 'Clean quad subdivision topology, bevel shader optimization, and mechanical articulation.',
+      proficiency_label: 'Expert',
+      display_order: 3,
+      is_visible: true
+    },
+    {
+      id: 'sk-4',
+      name: 'Geometry Nodes & Procedural',
+      category: '3D & CG',
+      description: 'Math-driven scatter engines, parametric asset generation, and procedural architectural arrays.',
+      proficiency_label: 'Advanced',
+      display_order: 4,
+      is_visible: true
+    },
+    {
+      id: 'sk-5',
+      name: 'Substance 3D Painter',
+      category: 'Software',
+      description: 'Custom smart materials, micro-surface wear, curvature baking, and multi-layer PBR exports.',
+      proficiency_label: 'Advanced',
+      display_order: 5,
+      is_visible: true
+    },
+    {
+      id: 'sk-6',
+      name: 'ZBrush Sculpting',
+      category: 'Software',
+      description: 'High-poly anatomical sculpts, creature design, dynamesh blocking, and 32-bit displacement map baking.',
+      proficiency_label: 'Proficient',
+      display_order: 6,
+      is_visible: true
+    },
+    {
+      id: 'sk-7',
+      name: 'Lighting & Photometry',
+      category: 'Post-Production',
+      description: 'Three-point studio lighting, IES real-world luminaire profiles, and high dynamic range environment mapping.',
+      proficiency_label: 'Advanced',
+      display_order: 7,
+      is_visible: true
+    },
+    {
+      id: 'sk-8',
+      name: 'Marvelous Designer',
+      category: 'Software',
+      description: 'Accurate physical pattern drafting, dynamic cloth simulations, and wind/drape stress relaxation.',
+      proficiency_label: 'Proficient',
+      display_order: 8,
+      is_visible: true
+    }
+  ],
+  social_links: [
+    {
+      id: 'soc-1',
+      platform: 'ArtStation',
+      url: 'https://artstation.com',
+      label: 'artstation.com/eliasvance',
+      display_order: 1,
+      is_visible: true
+    },
+    {
+      id: 'soc-2',
+      platform: 'Sketchfab',
+      url: 'https://sketchfab.com',
+      label: 'sketchfab.com/eliasvance',
+      display_order: 2,
+      is_visible: true
+    },
+    {
+      id: 'soc-3',
+      platform: 'Instagram',
+      url: 'https://instagram.com',
+      label: '@elias.3d.renders',
+      display_order: 3,
+      is_visible: true
+    },
+    {
+      id: 'soc-4',
+      platform: 'YouTube',
+      url: 'https://youtube.com',
+      label: 'Blender Workflow & Breakdowns',
+      display_order: 4,
+      is_visible: true
+    },
+    {
+      id: 'soc-5',
+      platform: 'GitHub',
+      url: 'https://github.com',
+      label: 'Open Source .blend Assets',
+      display_order: 5,
+      is_visible: true
+    },
+    {
+      id: 'soc-6',
+      platform: 'LinkedIn',
+      url: 'https://linkedin.com',
+      label: 'Professional Network',
+      display_order: 6,
+      is_visible: true
+    }
+  ],
+  messages: []
+};

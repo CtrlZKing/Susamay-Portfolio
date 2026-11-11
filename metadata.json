@@ -1,0 +1,8 @@
+{
+  "name": "AURA | Creative & Blender 3D Portfolio CMS",
+  "description": "Minimalist, editorial portfolio and private admin dashboard for 3D and digital artists. Powered by Blender project workflows and live CMS management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

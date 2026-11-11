@@ -1,0 +1,8 @@
+# Robots.txt for AURA Creative Portfolio
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /#admin
+
+Sitemap: https://aura-portfolio.example.com/sitemap.xml
